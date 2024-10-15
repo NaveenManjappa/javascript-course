@@ -3,29 +3,43 @@
   <head>
     <title>HTML CSS review</title>
     <style>
+      /*
+      This is a CSS comment
+      */
       .red-button {
-        background-color: red;
-        color:white;
-        border:none;
+      background-color: red;
+      color:white;
+      border:none;
       }
-      
+
       .yellow-button {
-        background-color: yellow;
-        
+      background-color: yellow;        
       }
-      
     </style>
   </head>
   <body>
-    <button title = "Good work" class="red-button">
+    <!--  This is html comment
+    -->
+    <button title = "Good work" class="red-button"
+    onclick="
+    alert('Good job!');
+    "
+    >
       Hello
     </button>
     <p>
       Paragrpah text 
-      <button class="yellow-button">Nest hello1
-    
-      </button>
+    <button class="yellow-button">Nest hello1</button>
     </p>
+    <script>
+      // This is a JS comment
+      //alert('Helllo');
+      /*
+      This is JS multi line comment
+      */
+     console.log(2+2);
+     console.log('Some' + 'text');
+    </script>
   </body>
 </html>
 
