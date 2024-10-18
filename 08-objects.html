@@ -41,6 +41,7 @@
     
       const product2 = {
         name: 'shirt',
+        inStock:false,
         //['delivery-time']: '1 day'
         'delivery-time': '1 day',
         rating: {
@@ -69,7 +70,77 @@
 
       console.log('typeof', typeof console);
       
+      //Built in objects
+      //JSON - Javascript object notation, no function allowed,more universal,storing data
+      console.log('StringifIED', JSON.stringify(product2));
+      console.log('Stringify',typeof JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2);
+      console.log('Parse:',JSON.parse(jsonString))
+
+      //localstorage
+      localStorage.setItem('message','hello');
+
+      // null vs undefined
+      //null is for intentionally defining empty value
+
+      let obj=null;
+      console.log('Null object', JSON.stringify(obj));
+
+      //Auto boxing - does not work with null and undefined
+      console.log('Length:','Hello'.length);
+      console.log('Upper:','Hello'.toUpperCase());
+
+      //Reference types - objects are reference types
+      const obj1 = {
+        mesaage: 'hello'
+      };
+      obj1.mesaage = 'Bye';
+      console.log('Obj1:',obj1);
+
+      const obj2  = obj1;
+      obj2.mesaage = 'Good bye';
+
+      console.log('obj1:',obj1);      
+
+      const obj3 = {
+        message:'Good bye'
+      };
+
+      console.log(obj1 === obj2);
+      console.log(obj3 === obj1);
+
+      //Shortcuts
+
+      const obj4 = {
+        message:'Good bye',
+        cost:799
+      };
+
+      //const message = obj4.message;
       
+      //Object Destructuring
+      const { message,cost } = obj4;
+      console.log(message,cost);
+
+
+      //Shorthand property
+      const obj5 = {
+        //message: message
+        message,//short hand property syntax
+        // method: function function1() {
+        //   console.log('method');
+        // }
+        method() {
+          console.log('method');//short hand method syntax
+        }
+      };
+      console.log(obj5);
+
+      obj5.method();
+
+      
+
     </script>
   </body>
 </html>
