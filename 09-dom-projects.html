@@ -6,14 +6,47 @@
   <body>
     <p>YouTube Subscribe Button</p>
     <button class="js-subscribe-btn" onclick="subscribe()">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeyDown(event)">
+
+    <button onclick="calculateTotal(event)">Calculate</button>
+    <p class="js-total-cost"></p>
     
     <script>
+      //Window is a built in object that represents the browser
+      console.log(window);
+      //window.alert('hi');
+
       function subscribe() {
         const buttonEl = document.querySelector('.js-subscribe-btn');
           if(buttonEl.innerHTML === 'Subscribe')
             buttonEl.innerHTML = 'Subscribed';
           else
             buttonEl.innerHTML = 'Subscribe';
+      }
+
+      function handleCostKeyDown(event) {
+        console.log(event.key);
+          if(event.key === 'Enter')
+            calculateTotal();
+      }
+      function calculateTotal(event) {
+        //console.log('event:',event);
+        const inputEl = document.querySelector('.js-cost-input');
+
+        let cost =Number(inputEl.value);
+        console.log('cost',typeof cost);
+
+        if(cost < 40){
+          cost += 10;
+          console.log('total',cost);
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+      
+        //Events and event listeners
+        
       }
     </script>
   </body>
