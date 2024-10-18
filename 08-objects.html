@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+
+    <script>
+
+      //Object helps us to group multiple values together
+      const product = {
+        //property value pair separated by comma
+        name: 'stocks',
+        price: 1090
+      };
+
+      //access the object and its values
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      //set the values
+      product.name = 'cotton socks';
+      console.log(product);
+
+      // add a new property
+      product.newProperty = true;
+      console.log(product);
+
+      //delete a property
+      delete product.newProperty;
+      console.log(product);
+
+      console.log(typeof product);
+
+      //Destructuring 
+      const {name,price } = product;
+
+      console.log(name,price);
+
+    
+      const product2 = {
+        name: 'shirt',
+        //['delivery-time']: '1 day'
+        'delivery-time': '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        //function when used inside a object is called a method
+        fun: function function1() {
+          console.log('Function inside object');
+        }
+      };
+
+      console.log(product2);
+      // Dot notation to read the property value
+      console.log(product2.name);
+
+      //Bracket notation to read the property value
+      console.log(product2['name']);
+
+      /// bracket notation lets us to use properties that don't work with dot notation
+      console.log(product2['delivery-time']);
+
+      console.log(product2.rating.count);
+
+      product2.fun();
+
+      console.log('typeof', typeof console);
+      
+      
+    </script>
+  </body>
+</html>

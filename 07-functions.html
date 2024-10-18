@@ -27,6 +27,18 @@
       calculateTax(2000,0.2);
       calculateTax(5000);
 
+      function outer() {
+        let count =0;
+        return function inner() {
+        
+        }
+      }
+
+      const counter = outer();
+      counter();
+      counter();
+
+
     </script>
   </body>
 </html>
