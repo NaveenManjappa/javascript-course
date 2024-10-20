@@ -66,7 +66,42 @@
         numsDoubled.push(nums[i] * 2);
       }
       console.log(numsDoubled);
+
+      const arr1 = [1, 2, 3];
+      const arr2 = arr1;
+      arr2.push(4);
+
+      console.log('arr1',arr1);
+      arr3 = arr1.slice();
+      console.log('arr3',arr3);
+
+      const arr5 = [1, 2, 3];
+      //Destructuring
+
+      const [first,second] = [1,2,3];
+      console.log('firs-sec',first,second);
+
+      for(let i = 1;i <= 10; i++){
+        if(i % 3 === 0)
+          continue;//helps to skip the loop
+        console.log('for-i',i);
+
+        if(i === 8)
+          break; // exit a loop early
+      }
+
+      let j = 1;
+      while (j <= 10){
+        if(j % 3 === 0){
+          j++;
+          continue;
+        }
+        console.log('while-j:',j);
+        j++;
+      }
       
+      
+
     </script>
   </body>
 </html>
