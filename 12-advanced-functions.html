@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <script>
+
+      function greeting() {
+        console.log('Hello');
+      }
+
+      greeting();
+
+      //Functions are values which can be saved in a variable
+      //Function without a name is called Anonymous function
+      //Hoisting does not work when a function is saved in a variable
+      const function1 = function () {
+        console.log('Hello2');
+      };
+
+      function1();
+      console.log(typeof function1);
+
+      const obj1 = {
+        num: 2,
+        fun: function () { // this is called a method, function declared in a object as property
+          console.log('Hello3');
+        }
+      };
+
+      obj1.fun();
+
+      function display(param) {
+        console.log('param',param);
+      }
+
+      display(2);
+
+      //passing function into a function
+      function run(param) {
+        param();
+      }
+
+      run(() => {//callback function
+        console.log('Run');
+      });
+
+      setTimeout(function() {//asynchronous code, it does not block the code
+        console.log('Timeout');
+        console.log('Timeout2');
+      },2000);
+
+      console.log('Next line');
+
+      const intervalId = setInterval(function() {
+        console.log('Interval');
+        clearInterval(intervalId);
+      },3000);
+
+      console.log('Next line2');
+
+      
+
+      //Loop through an array
+      [
+        'Make dinner',
+        'Wash dishes',
+        'Watch youtube'
+      ].forEach(function (value,index) { //does not have continue, the same skip can be acheived through return
+
+        if(value  === 'Wash dishes') return;
+          console.log(value,index);
+      });
+
+    </script>
+  </body>
+</html>
