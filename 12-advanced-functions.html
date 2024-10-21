@@ -67,11 +67,43 @@
         'Make dinner',
         'Wash dishes',
         'Watch youtube'
-      ].forEach(function (value,index) { //does not have continue, the same skip can be acheived through return
+      ].forEach( (value,index) => { //does not have continue, the same skip can be acheived through return
 
         if(value  === 'Wash dishes') return;
           console.log(value,index);
       });
+
+      const regularFunction = function(param,param2) {
+        console.log('Regular function');
+        return 5;
+      }
+
+      regularFunction();
+
+      //Arrow functions - they are not supported for Hoisting
+      const arrowFunction = (param,param2) => {
+        console.log('Hello Arrow');
+        return 5;
+      }
+      arrowFunction();
+
+      const oneParam = param => {
+        console.log(param + 1);
+      }
+      oneParam(2);
+
+      const oneLine = () => 2 + 3;
+      console.log('oneLine', oneLine());
+
+      const obj2 = {
+        method: () => {
+          console.log('method');
+        },
+
+        method2 () { //Shorthand method
+          console.log('method2');
+        }
+      };
 
     </script>
   </body>
