@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        min-height: 100vh;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left:0;
+        right: 0;
+        height: 50px;
+        background: #333;
+        color: white;
+        padding: 10px;
+      }
+
+      .social-icons {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        background: #333;
+        color: white;
+        height: 50px;
+
+      }
+      .chat-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #333;
+        color: white;
+        height: 50px;
+      }
+
+      .cookie-notice {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #333;
+        color: white;
+      }
+
+      .content {
+        margin-top: 80px;
+        margin-bottom: 60px;
+      }
+
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: rgba(0, 0, 0, 0.5);
+        height: 50px;
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="navbar">
+      Fixed at Top (using top: 0, left: 0, right: 0)
+    </div>
+
+    <div class="social-icons">
+      Fixed at Left (using left: 20px, top: 50%)
+    </div>
+
+    <div class="chat-button">
+      Fixed at Bottom Right (using bottom: 20px, right: 20px)
+    </div>
+
+    <div class="cookie-notice">
+      Fixed at Bottom (using bottom: 0, left: 0, right: 0)
+    </div>
+
+    <div class="content">
+      <h1>Main Content</h1>
+      <p>Scroll down to see how fixed positioning works.</p>
+      <p>The fixed elements will stay in their positions as you scroll.</p>
+    </div>
+
+    <div class="modal">
+      Modal dialogue
+    </div>
+  </body>
+</html>
+
+<!-- 
+Basic Concept
+Position: fixed is a CSS positioning property that:
+
+Removes elements from the normal document flow
+Positions elements relative to the viewport (browser window)
+Keeps elements in the same position even when scrolling
+Makes other content flow underneath the fixed elements
+
+Position Properties
+The four main properties that control fixed positioning:
+
+top: Sets distance from viewport's top edge
+bottom: Sets distance from viewport's bottom edge
+left: Sets distance from viewport's left edge
+right: Sets distance from viewport's right edge 
+-->
+
