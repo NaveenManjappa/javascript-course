@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Relative and Absolute Positions</title>
+    <style>
+      .container {
+        width: 400px;
+        height: 400px;
+        background: #f0f0f0;
+        margin: 50px;
+        border: 2px solid #333;
+        position: relative;
+      }
+
+      .box-normal {
+        width: 100px;
+        height: 100px;
+        background: #e443ec;
+        margin: 10px;
+      }
+
+      .box-relative {
+        width: 100px;
+        height: 100px;
+        background: #3478db;
+        position: relative;
+        top: 20px;
+        left:50px;
+      }
+
+      .box-absolute {
+        width: 100px;
+        height: 100px;
+        background: #2ecc71;
+        position: absolute;
+       right: 30px;
+       bottom: 30px;
+      }
+    </style>
+
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="box-normal">Normal</div>
+      <div class="box-relative">Relative</div>      
+      <div class="box-absolute">Absolute</div>
+    </div>
+  </body>
+</html>
