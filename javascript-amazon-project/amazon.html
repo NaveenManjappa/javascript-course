@@ -4,6 +4,7 @@
     <title>Amazon project</title>
     <link rel="stylesheet" href="styles/shared/general.css">
     <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/pages/amazon.css">
   </head>
   <body>
     <div class="amazon-header">
@@ -22,18 +23,69 @@
         </div>
 
         <div class="amazon-header-right-section">
-          <a class="orders-link" href="amazon.html">
+          <a class="orders-link" href="orders.html">
             <span class="returns-text">Returns</span>
             <span class="orders-text">& Orders</span>
           </a>
-          <a class="cart-link" href="amazon.html">
+          <a class="cart-link" href="checkout.html">
             <img class="cart-icon" src="images/icons/cart-icon.png">
             <div class="cart-quantity">4</div>
             <div class="cart-text">Cart</div>
           </a>
-        </div>
+        </div>        
+    </div>
 
+    <div class="main">
+
+      <div class="products-grid">
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image" src="images/products/athletic-cotton-socks-6-pairs.jpg">
+          </div>
+
+          <div class="product-name">
+            Black and Gray Athletic Cotton socks - 6 pairs
+          </div>
+
+          <div class="product-rating-container">
+            <img src="images/ratings/rating-45.png" alt="" class="product-rating-stars">
+            <div class="product-rating-count">87</div>
+          </div>
+
+          <div class="product-price">
+            $10.99
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer">Spacer</div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png" alt="">
+            Added
+          </div>
+
+          <button class="add-to-cart-button primary-button">
+            Add to Cart
+          </button>
+
+        </div>
         
+      </div>
+
     </div>
     <script></script>
   </body>

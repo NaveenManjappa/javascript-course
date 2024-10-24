@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background: white;
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .basic-shadow {
+        box-shadow: 3px 3px 5px #888888;
+      }
+
+      .soft-shadow {
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .inner-shadow {
+        box-shadow: inset 0 0 10px #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box basic-shadow">Basic shadow</div>
+    <div class="box soft-shadow">Soft shadow</div>
+    <div class="box inner-shadow">Inner shadow</div>
+  </body>
+</html>
