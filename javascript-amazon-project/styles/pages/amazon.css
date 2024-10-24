@@ -4,7 +4,7 @@
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(8,1fr);
+  grid-template-columns: repeat(7,1fr);
 }
 
 .product-container {
@@ -14,7 +14,7 @@
   padding-top: 40px;
   padding-bottom: 25px;
   padding-right: 25px;
-
+  
   display: flex;
   flex-direction: column;
 

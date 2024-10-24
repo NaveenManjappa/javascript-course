@@ -21,9 +21,8 @@
 }
 
 .amazon-header-middle-section {
-  flex: 1.75;
-  width: 500px;
-  
+  flex: 1;
+  max-width: 850px;
   margin-right: 10px;
   margin-left: 10px;
 
