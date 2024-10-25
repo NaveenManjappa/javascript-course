@@ -34,14 +34,14 @@ products.forEach(product => {
             </select>
           </div>
 
-          <div class="product-spacer">Spacer</div>
+          <div class="product-spacer"></div>
 
           <div class="added-to-cart">
             <img src="images/icons/checkmark.png" alt="">
             Added
           </div>
 
-          <button class="add-to-cart-button primary-button">
+          <button class="add-to-cart-button primary-button js-add-to-cart" data-product-id ="${product.id}">
             Add to Cart
           </button>
 
@@ -53,3 +53,34 @@ products.forEach(product => {
 
 document.querySelector('.js-products-grid')
   .innerHTML = productsHTML;
+
+document.querySelectorAll('.js-add-to-cart')
+  .forEach(btnEl => {
+    btnEl.addEventListener('click',() => {
+      //console.log(btnEl.dataset.productName);//it gives all the data attributes attached to the element
+
+      const productId = btnEl.dataset.productId;
+
+      let matchingItem;
+      //check if product is already there in the cart
+      cart.forEach(item => {
+        if(productId === item.productId){
+          matchingItem = item;
+        }
+      });
+
+      if(matchingItem) {
+        matchingItem.quantity += 1;
+      } else {
+        cart.push({
+          productId:productId,
+          quantity:1
+        });
+  
+      }
+
+      
+      console.log('cart',cart);
+
+    });
+  });
