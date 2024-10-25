@@ -2,8 +2,58 @@
 <html>
   <head>
     <title>Tracking</title>
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/pages/tracking.css">
   </head>
   <body>
-    <h2>Tracking </h2>
+
+    <div class="amazon-header">
+      <div class="amazon-header-left-section">
+        <a href="amazon.html" class="header-link">
+          <img class="amazon-logo" src="images/amazon-logo-white.png">
+        </a>
+      </div>
+
+      <div class="amazon-header-middle-section">
+        <input class="search-bar" placeholder="Search">
+        
+        <button class="search-button">
+          <img class="search-icon" src="images/icons/search-icon.png" alt="">
+        </button>
+      </div>
+
+      <div class="amazon-header-right-section">
+        <a class="orders-link" href="orders.html">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+        </a>
+        <a class="cart-link" href="checkout.html">
+          <img class="cart-icon" src="images/icons/cart-icon.png">
+          <div class="cart-quantity">3</div>
+          <div class="cart-text">Cart</div>
+        </a>
+      </div>        
+  </div>
+
+  <div class="main">
+    <div class="order-tracking">
+      <a href="orders.html" class="back-to-orders-link link-primary">View All Orders</a>
+      <div class="delivery-date">Arriving on Monday, June 13</div>
+      <div class="product-info">Black and Gray Athletic Cotton Socks - 6 Pairs</div>
+      <div class="product-info">Quantity: 1</div>
+      <img src="images/products/athletic-cotton-socks-6-pairs.jpg" class="product-image">
+      <div class="progress-label-container">
+        <div class="progress-label">Preparing</div>
+        <div class="progress-label">Shipped</div>
+        <div class="progress-label">Delivered</div>
+      </div>
+
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
   </body>
 </html>

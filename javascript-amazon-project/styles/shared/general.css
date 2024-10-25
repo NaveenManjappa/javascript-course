@@ -71,3 +71,8 @@ input:focus {
   -webkit-box-orient:vertical;
   overflow: hidden;
 }
+
+.link-primary {
+  color: rgb(1,124,182);
+  cursor: pointer;
+}
