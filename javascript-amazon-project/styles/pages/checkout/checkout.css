@@ -8,21 +8,21 @@
 .page-title {
   font-size: 22px;
   font-weight: bold;
+  margin-bottom: 18px;
 }
 
 .checkout-grid {
   display: grid;
   grid-template-columns: 1fr 350px;
-  column-gap: 30px;
+  column-gap: 12px;
+  align-items: start;
 }
 
 .order-summary {
 
 }
 
-.payment-summary {
 
-}
 
 .cart-item-container {
   border: 1px solid rgb(222,222,222);
@@ -103,4 +103,43 @@
 .delivery-option-price {
   color: rgb(120,120,120);
   font-size: 15px;
+}
+
+.payment-summary {
+  border: 1px solid rgb(222,222,222);
+  padding: 18px;
+  border-radius: 4px;
+}
+
+.payment-summary-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.payment-summary-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  font-size: 15px;
+  margin-bottom: 9px;
+}
+
+.payment-summary-money {
+  text-align: right;
+}
+
+.total-row {
+  color: rgb(177, 39, 4);
+  font-weight: 700;
+  font-size: 18px;
+  border-top: 1px solid rgb(222,222,222);
+  padding-top: 18px;
+}
+
+.place-order-button {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 8px;
+  margin-top: 11px;
+  margin-bottom: 15px;
 }
