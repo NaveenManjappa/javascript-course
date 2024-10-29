@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Closures in JS</title>
+  </head>
+  <body>
+    <script>
+
+      function createCounter() {
+        let counter = 0;
+
+        return {
+          increment() {  counter++ },
+          decrement() { counter-- },
+          getCount() { return counter; }
+
+        }
+      }
+
+      const counter = createCounter();
+
+      counter.increment();
+      counter.increment();
+      console.log('counter',counter.getCount());
+      counter.decrement();
+      console.log(counter.getCount());
+      counter.increment();
+
+      const counter2 = createCounter();
+      counter2.increment();
+      counter2.increment();
+      console.log('counter2',counter2.getCount());
+
+      // for (var i = 0; i < 3; i++) {
+      //     setTimeout(function() { alert(i); }, 1000 + i);
+      // }
+
+      function outer() {
+        function inner() {
+          console.log(a);
+        }
+
+        let a = 10;
+        return inner;
+      }
+
+    </script>
+  </body>
+</html>
