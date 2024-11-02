@@ -1,4 +1,5 @@
 import { formatCurrency } from '../scripts/utils/money.js';
+
 export function getProduct(productId) {
   let matchingProduct;
       
@@ -85,6 +86,28 @@ object3.method();
 //2 inside a function, this = undefined, but we can change it
 //3 Arrow functions do not change the value of this
 
+export let products = [];
+
+export function loadProducts(fun) {
+  const xhr = new XMLHttpRequest();
+  xhr.addEventListener('load',() => {
+    products = JSON.parse(xhr.response).map(productDetails => {
+      if(productDetails.type === 'clothing'){
+        return new Clothing(productDetails);
+      }
+      return new Product(productDetails);
+    });
+    
+    fun();
+    console.log('load products');
+  });
+  xhr.open('GET','https://supersimplebackend.dev/products');
+  xhr.send();
+
+}
+
+
+/*
 
 export const products = [
   {
@@ -754,3 +777,4 @@ export const products = [
 
 });
 
+*/
